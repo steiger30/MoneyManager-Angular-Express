@@ -1,0 +1,25 @@
+<app-finance-control></app-finance-control>
+<div class="mb-5">
+
+  <mat-card class="max-w-4xl h-24 p-5 w-full flex flex-row items-center justify-between m-auto">
+    <div class='flex flex-col'>
+      <label>Descrição</label>
+      <input type="text" class="input">
+    </div>
+    <div class='flex flex-col'>
+      <label>Valor</label>
+      <input type="text" class="input">
+    </div>
+
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Entrada</mat-radio-button>
+      <mat-radio-button value="2">Saida</mat-radio-button>
+    </mat-radio-group>
+
+    <button mat-raised-button color="primary">Adicionar</button>
+  </mat-card>
+</div>
+<div class="max-w-4xl m-auto  h-screen">
+
+  <app-finance-table></app-finance-table>
+</div>
