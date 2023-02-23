@@ -1,25 +1,31 @@
 <app-finance-control></app-finance-control>
+
 <div class="mb-5">
+  <form [formGroup]="formFinance" (ngSubmit)="onCreateFinance()">
+    <mat-card
+      class="max-w-4xl h-24 p-5 w-full flex flex-row items-center justify-between m-auto"
+    >
+      <div class="flex flex-col">
+        <label>Descrição</label>
+        <input type="text" class="input" formControlName="description" />
+      </div>
+      <div class="flex flex-col">
+        <label>Valor</label>
+        <input type="number" class="input" formControlName="valor" />
+      </div>
 
-  <mat-card class="max-w-4xl h-24 p-5 w-full flex flex-row items-center justify-between m-auto">
-    <div class='flex flex-col'>
-      <label>Descrição</label>
-      <input type="text" class="input">
-    </div>
-    <div class='flex flex-col'>
-      <label>Valor</label>
-      <input type="text" class="input">
-    </div>
+      <mat-radio-group aria-label="Select an option" formControlName="category">
+        <mat-radio-button value="entrada">Entrada</mat-radio-button>
+        <mat-radio-button value="saida">Saida</mat-radio-button>
+      </mat-radio-group>
 
-    <mat-radio-group aria-label="Select an option">
-      <mat-radio-button value="1">Entrada</mat-radio-button>
-      <mat-radio-button value="2">Saida</mat-radio-button>
-    </mat-radio-group>
-
-    <button mat-raised-button color="primary">Adicionar</button>
-  </mat-card>
+      <button mat-raised-button color="primary">Adicionar</button>
+    </mat-card>
+  </form>
 </div>
-<div class="max-w-4xl m-auto  h-screen">
-
-  <app-finance-table></app-finance-table>
+<div class="max-w-4xl m-auto h-screen">
+  <app-finance-table
+    [data]="myData"
+    (deleteFinace)="onDeleteFinance($event)"
+  ></app-finance-table>
 </div>

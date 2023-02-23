@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { SharedModule } from 'src/app/shared/shared.module';
 @NgModule({
   declarations: [
     SignInComponent,
@@ -28,7 +29,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatDividerModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule 
   ]
 })
 export class AuthModule { }

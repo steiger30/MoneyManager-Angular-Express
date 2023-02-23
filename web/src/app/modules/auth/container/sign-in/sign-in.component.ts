@@ -36,7 +36,6 @@ export class SignInComponent implements OnInit {
   ) { }
 
   onSubmit() {
-    console.log(this.login.value)
     if (this.login.valid) {
       this.service.login(this.login.value as Params, '/users/auth').subscribe({
         next: (token) => this.onLoginPerformed(token),
@@ -47,6 +46,7 @@ export class SignInComponent implements OnInit {
 
   onLoginPerformed(token: any) {
     window.localStorage.setItem('token', token.token);
+    
   }
 
   dialogSignUp() {

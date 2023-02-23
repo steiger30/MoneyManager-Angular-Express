@@ -1,9 +1,13 @@
-<div class='flex items-center justify-end h-full'>
-  <div class='w-full bottom-color h-full flex items-center justify-center'>
-    <img src="assets/img/Art.png" alt="">
+<div class="flex items-center justify-end h-full">
+  <div class="w-full bottom-color h-full flex items-center justify-center">
+    <img src="assets/img/Art.png" alt="" />
   </div>
-  <mat-card class='w-8/12 h-full flex justify-center pr-5'>
-    <form (ngSubmit)="onSubmit()" [formGroup]="login" class='w-25 flex flex-col m-10'>
+  <mat-card class="w-8/12 h-full flex justify-center pr-5">
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="login"
+      class="w-25 flex flex-col m-10"
+    >
       <h1 class="text-center mb-8 login-title">Bem-vindo</h1>
 
       <mat-form-field appearance="outline">
@@ -14,28 +18,50 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Senha</mat-label>
-        <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" />
+        <input
+          matInput
+          formControlName="password"
+          [type]="hide ? 'password' : 'text'"
+        />
         <mat-icon matPrefix>vpn_key</mat-icon>
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
         </button>
       </mat-form-field>
 
-      <div class='flex justify-between pb-5'>
-        <div>lembrar a senha</div><a> Esqueci a senha!</a>
+      <div class="flex justify-between pb-5">
+        <div>lembrar a senha</div>
+        <a> Esqueci a senha!</a>
       </div>
 
-      <button mat-raised-button class='btn mb-8' color="primary" type="submit"
-        [disabled]="login.invalid">Entrar</button>
+      <button
+        mat-raised-button
+        class="btn mb-8"
+        color="primary"
+        type="submit"
+        [disabled]="login.invalid"
+      >
+        Entrar
+      </button>
       <mat-divider class="pb-5"></mat-divider>
 
-      <h3 class='text-center'>Ainda não tem conta?</h3>
+      <h3 class="text-center">Ainda não tem conta?</h3>
 
-      <button mat-stroked-button class='btn btn-bordar' type="button" color="primary" (click)="dialogSignUp()">Criar uma
-        conta</button>
-
-
+      <button
+        mat-stroked-button
+        class="btn btn-bordar"
+        type="button"
+        color="primary"
+        (click)="dialogSignUp()"
+      >
+        Criar uma conta
+      </button>
     </form>
   </mat-card>
 </div>

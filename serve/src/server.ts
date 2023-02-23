@@ -33,6 +33,6 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
   })
 })
 
-app.listen(3000, () => {
-  console.log("Server is running in port 3000")
+app.listen(3001, () => {
+  console.log("Server is running in port 3001")
 })

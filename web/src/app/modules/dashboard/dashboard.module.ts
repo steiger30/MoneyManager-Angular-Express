@@ -12,12 +12,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     DashboardComponent,
     FinanceComponent,
     FinanceTableComponent,
-    FinanceControlComponent
+    FinanceControlComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,9 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatRadioModule,
     MatButtonModule,
-    MatTableModule
-  ]
+    MatTableModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
-export class DashboardModule { }
+export class DashboardModule {}
