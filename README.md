@@ -23,8 +23,8 @@ categorias e contas bancárias, além de visualizar relatórios e gráficos para
 1. Clone o repositório para sua máquina;
 2. Instale as dependências do backend: npm install na pasta serve;
 3. Instale as dependências do frontend: npm install na pasta web;
-4. Inicie o servidor backend: npm start na pasta backend;
-5. Inicie o servidor frontend: ng serve na pasta frontend;
+4. Inicie o servidor backend: npm run dev na pasta serve;
+5. Inicie o servidor frontend: ng serve na pasta web;
 6. Acesse o sistema pelo navegador em http://localhost:4200.
 
 ### Tecnologias Utilizadas
